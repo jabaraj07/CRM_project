@@ -20,6 +20,9 @@
 .env.test.local
 .env.production.local
 
+# Allow .env.example files (these are templates and should be committed)
+!.env.example
+
 # logs
 npm-debug.log*
 yarn-debug.log*
