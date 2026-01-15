@@ -1,0 +1,316 @@
+.user-management {
+  max-width: 1400px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.page-header h2 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 24px;
+}
+
+.users-table-container {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.users-table thead {
+  background: #f8f9fa;
+}
+
+.users-table th {
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+  color: #2c3e50;
+  border-bottom: 2px solid #ddd;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.users-table td {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  color: #555;
+  font-size: 14px;
+}
+
+.users-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.users-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+}
+
+.role-badge.admin {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.role-badge.sales-user {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-danger {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: opacity 0.3s;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-secondary {
+  background: #95a5a6;
+  color: white;
+}
+
+.btn-danger {
+  background: #e74c3c;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled),
+.btn-secondary:hover:not(:disabled),
+.btn-danger:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.btn-primary:disabled,
+.btn-secondary:disabled,
+.btn-danger:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+  font-size: 16px;
+}
+
+.error-message {
+  background-color: #fee;
+  color: #c33;
+  padding: 12px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #fcc;
+  font-size: 14px;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #666;
+}
+
+/* Mobile sizes (below 768px) */
+@media (max-width: 767px) {
+  .user-management {
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 20px;
+    gap: 15px;
+  }
+
+  .page-header h2 {
+    font-size: 18px;
+  }
+
+  .users-table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .users-table {
+    min-width: 600px;
+    width: 100%;
+  }
+
+  .users-table th {
+    padding: 12px 10px;
+    font-size: 12px;
+  }
+
+  .users-table td {
+    padding: 12px 10px;
+    font-size: 13px;
+  }
+
+  .role-badge {
+    font-size: 10px;
+    padding: 3px 10px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .action-buttons button {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  .empty-state {
+    padding: 30px 15px;
+    font-size: 16px;
+  }
+
+  .error-message {
+    padding: 10px;
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+
+  .loading {
+    padding: 30px 15px;
+    font-size: 16px;
+  }
+}
+
+/* Very small screens (below 480px) */
+@media (max-width: 480px) {
+  .page-header h2 {
+    font-size: 16px;
+  }
+
+  .users-table th {
+    padding: 10px 8px;
+    font-size: 11px;
+  }
+
+  .users-table td {
+    padding: 10px 8px;
+    font-size: 12px;
+  }
+
+  .role-badge {
+    font-size: 9px;
+    padding: 2px 8px;
+  }
+
+  .action-buttons button {
+    padding: 9px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Tablet and iPad sizes (768px - 1024px) - general tablet styles */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .user-management {
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .page-header {
+    margin-bottom: 25px;
+    gap: 15px;
+  }
+
+  .page-header h2 {
+    font-size: 20px;
+  }
+
+  .users-table-container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .users-table th,
+  .users-table td {
+    padding: 14px 12px;
+    font-size: 14px;
+  }
+
+  .role-badge {
+    font-size: 11px;
+    padding: 4px 11px;
+  }
+
+  .action-buttons {
+    gap: 8px;
+  }
+
+  .action-buttons button {
+    padding: 9px 14px;
+    font-size: 13px;
+  }
+}
+
+/* Large tablets (1025px and above) - general large tablet styles */
+@media (min-width: 1025px) {
+  .user-management {
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .users-table th,
+  .users-table td {
+    padding: 16px;
+    font-size: 14px;
+  }
+
+  .page-header h2 {
+    font-size: 22px;
+  }
+}
+
